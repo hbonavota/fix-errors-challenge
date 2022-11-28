@@ -13,7 +13,8 @@ const App = () => {
   const addGoalHandler = enteredText => {
     setCourseGoals(prevGoals => {
       const updatedGoals = [...prevGoals];
-      updatedGoals.unshift({ text: enteredText, id: 'goal1' });
+      //add Math.random to fix errors but is not a good solution in production
+      updatedGoals.unshift({ text: enteredText, id: Math.random().toString() });
       return updatedGoals;
     });
   };
